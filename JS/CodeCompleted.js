@@ -4,7 +4,7 @@ const taskInput = document.querySelector(".input");
 const taskListItems = document.querySelector(".task-listItems");
 
 /**
- * Get task store in local storage
+ * Get task store to local storage
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /**
- * Store task in local storage
+ * Store task to local storage
  */
 
 const storeTask = () => {
@@ -129,30 +129,25 @@ AddTaskBtn.addEventListener("click", (e) => {
   addNewTask();
 });
 
-const user = {
-  id: 1,
-  name: "Kouadio",
-  job: "Solfware developper",
-};
+const task = [
+  {
+    desccription: "Comprendre le langage JavaScript",
+    completed: true,
+  },
+  {
+    desccription: "Maitriser Node.js",
+    completed: false,
+  },
+  {
+    desccription: "Connaitre le css",
+    completed: true,
+  },
+  {
+    desccription: "Maitriser git & gitHUb",
+    completed: true,
+  },
+];
 
-localStorage.setItem("user", JSON.stringify(user));
+const numberOfTaskCompleted = task.filter((task) => task.completed).length;
 
-const getUser = JSON.parse(localStorage.getItem("user"));
-document.addEventListener("DOMContentLoaded", () => {});
-
-console.log("SASADADAAAA", getUser);
-
-"I am learning Web Dev"
-  .split(" ")
-  .map((s) => s[0].toUpperCase() + s.slice(1).toLowerCase())
-  .join(" ");
-
-const words = "I try web developement";
-
-console.log(
-  "word===>",
-  words
-    .split("")
-    .map((w) => w[0].toUpperCase())
-    .join("")
-);
+console.log(numberOfTaskCompleted);

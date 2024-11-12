@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --bg: #000430;
+  --secondBg: #171c48;
+  --textColor: #fff;
+  --teal: #24feee;
+  --puple: #828dff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--textColor);
+}
+
+#todo-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 120px auto 0 auto;
+  max-width: 550px;
+}
+
+.taskStatus {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border: solid 1px var(--secondBg);
+  border-radius: 10px;
+  gap: 15px;
+  width: 100%;
+}
+
+.details {
+  width: 100%;
+}
+
+#number {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--puple);
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 10px;
+  background: var(--secondBg);
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+#progress {
+  background: var(--teal);
+  width: 0%;
+  height: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input {
+  flex: 1;
+  height: 35px;
+  padding: 5px;
+  background: var(--secondBg);
+  color: white;
+  border: solid 1px var(--puple);
+  outline: none;
+  border-right: none;
+}
+
+.submitBtn {
+  background: var(--puple);
+  color: var(--textColor);
+  border: solid 1px var(--puple);
+  cursor: pointer;
+  width: 20%;
+}
+
+.icons img {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.task-listItems {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+  width: 100%;
+  list-style: none;
+}
+
+.dynamicTask {
+  background: var(--secondBg);
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.task input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.task {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.completed p {
+  text-decoration: line-through;
+  color: var(--teal);
+}
+
+.statusTache {
+  margin-top: 15px;
+}

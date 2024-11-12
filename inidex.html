@@ -3,12 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <title>Java Script PROJET</title>
   </head>
+
+  <script></script>
   <body>
-    <h1>
-      <a href=""></a>
-    </h1>
+    <div id="todo-container">
+      <div class="taskStatus">
+        <div class="details">
+          <h1>Todo Application</h1>
+          <p class="statusTache">Status de la tâche</p>
+          <div class="progressBar">
+            <div id="progress"></div>
+          </div>
+        </div>
+        <div class="numberSections">
+          <p id="number">0 / 0</p>
+        </div>
+      </div>
+
+      <form action="">
+        <input type="text" placeholder="Ajouter une tâche..." class="input" />
+        <button type="submit" id="AddTaskBtn" class="submitBtn">Ajouter</button>
+      </form>
+
+      <ul class="task-listItems"></ul>
+    </div>
   </body>
+
   <script src="JS/app.js"></script>
 </html>
